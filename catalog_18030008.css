@@ -1,0 +1,471 @@
+* {  
+	display: block;	/* display content in block */
+	background: url("images/background.jpg") center fixed;	/* inserting background image */	
+	background-size: contain;	/* covers the background image */
+}
+
+#logo {
+	content: url('images/dealgaraLogo.png');
+	transition-duration: 1200ms;
+	transition-timing-function: ease-out;
+	opacity: 0.5;
+	padding: 20px;
+	float: right;	/* float the content to the right */
+	margin-top: 5%;
+	width: 350px;
+	height: 200px;
+	border-radius: 100px;
+}
+
+#logo:hover {
+	transform: rotate(360deg);
+}
+
+vehicle_shop { 
+	font-family: verdana;	/* introducing verdana as a font family */
+	width: 90%;
+	color: rgb(255,255,255);
+	margin: 0 auto 0 auto;  
+	border: 4px solid grey;	/* implementing border with width, style and color */
+	padding: 10px;
+}
+
+slogan:before {
+	content: "Online Shop's Slogan: ";
+	font-size: 24px;	/* setting font size to 18px */
+	font-weight: bold;
+	color: orange;
+}
+
+slogan, launched_on {
+	font-size: 26px;
+}
+
+launched_on:before {
+	content: "Website Launched On:  ";
+	font-size: 24px;
+	font-weight: bold;
+	color: orange;
+}
+
+shop_name { 
+	text-shadow: 2px 2px 9px rgba(500,40,40,6); 
+	text-decoration: overline underline; 
+	padding: 25px;  
+	font-size: 34pt;  
+	font-weight: bold;  
+	font-family: verdana;  
+	text-align: center; 
+	margin-left: 20%;
+	margin-top: 2%;
+}
+
+address, telephone_number, website_url {
+	font-size: 28px;
+	text-align: center; 
+	margin-left: 20%;
+} 
+
+shop_description:before {
+	content: "About Us";
+	color: grey;
+	font-weight: bold;
+	font-size: 30pt;
+	text-decoration: double underline;
+	display: block;
+	margin-top: 2%;
+}
+
+shop_description {
+	padding: 10px;
+	font-size: 24pt;
+	text-align: justify;
+}
+
+shop_detail {
+	border: 4px inset grey;	
+	margin-bottom: 30px;
+	padding: 5px;
+}
+
+message {
+	font-family: sans-serif;	
+	margin-bottom: 40px;
+	font-size: 30px;		
+	font-weight: bold;
+	text-align: center;
+	opacity: 0.5;
+	outline: dashed;
+	background: grey;
+}
+
+item {
+	margin-bottom: 30px;
+	outline-style: outset;
+	padding: 5px;
+}
+
+address:before { 
+	background-image: url('images/address.png');  
+	background-size: 40px 40px;  
+	display: inline-block;  
+	width:40px;  
+	height: 40px;
+	content: "";  
+	margin-right: 15px; 
+} 
+ 
+telephone_number:before {  
+	background-image: url('images/telephone.png');  
+	background-size: 40px 40px; 
+	display: inline-block;  
+	width:40px;  
+	height: 40px; 
+	content: "";  
+	margin-right: 20px; 
+	margin-left: -4.5%;
+	outline: none;
+	border: none;
+} 
+ 
+website_url:before {  
+	background-image: url('images/url.png');  
+	background-size: 40px 40px;  
+	display: inline-block;  
+	width:40px;  
+	height: 40px;  
+	content: "";  
+	margin-right: 15px; 
+} 
+
+city,country {  
+	display: inline-block;
+} 
+
+brand_name { 
+	color: silver; 
+	font-size: 30pt;  
+	font-weight: bold;  
+	font-family: cursive; 
+}
+
+li {  
+	display: list-item;  
+	margin-left: 50px;  
+	list-style-type: circle;	/* creating list style type to circle */
+	margin-bottom: 10px; 
+	font-size: 30px;
+	text-align: justify;
+} 
+ 
+description:before {  
+	content:"Specifications: ";  
+	font-size: 24pt;
+	font-weight: bold;
+	text-decoration: underline;
+	color: orange;
+} 
+
+quantity:before {
+	content: "Quantity Available in Stock: ";
+} 
+
+quantity { 
+	text-shadow: 2px 2px #FF0000; 
+	font-style: oblique;  
+	font-size: 20pt;
+	font-weight: bold; 
+	display: block;   
+	margin-bottom: 5px;
+} 
+ 
+price:before {  
+	content: "Price: ";
+	font-weight: bold;
+	color: orange;
+	font-size: 22pt;
+}
+
+price, mileage, fuel_tank {
+	font-size: 32px;
+}
+ 
+#car_image1 {
+	content: url('images/car_image1.png');
+	object-fit: contain;
+	width: 700px;
+	height: 300px;
+	border-radius: 30px;
+}
+
+#car_image2 {
+	content: url('images/car_image2.png');
+	object-fit: contain;
+	width: 700px;
+	height: 300px;
+	border-radius: 30px;
+}
+#car_image3 {
+	content: url('images/car_image3.png');
+	object-fit: contain;
+	width: 700px;
+	height: 300px;
+	border-radius: 30px;
+}
+#car_image4 {
+	content: url('images/car_image4.png');
+	object-fit: contain;
+	width: 700px;
+	height: 300px;
+	border-radius: 30px;
+}
+#car_image5 {
+	content: url('images/car_image5.png');
+	object-fit: contain;
+	width: 700px;
+	height: 300px;
+	border-radius: 30px;
+}
+#car_image6 {
+	content: url('images/car_image6.png');
+	object-fit: contain;
+	width: 700px;
+	height: 300px;
+	border-radius: 30px;	
+}
+#car_image7 {
+	content: url('images/car_image7.png');
+	object-fit: contain;
+	width: 700px;
+	height: 300px;
+	border-radius: 30px;
+}
+#car_image8 {
+	content: url('images/car_image8.png');
+	object-fit: contain;
+	width: 700px;
+	height: 300px;
+	border-radius: 30px;
+}
+
+#carLogo1 {
+	content: url('images/tata.png');
+	object-fit: contain;
+	width: 500px;
+	height: 300px;
+	border-radius: 30px;
+	float: right;
+	margin-top: -300px;
+}
+#carLogo2 {
+	content: url('images/audi.png');
+	padding: 20px;
+	object-fit: contain;
+	width: 500px;
+	height: 300px;
+	border-radius: 30px;
+	float: right;
+	margin-top: -340px;
+}
+#carLogo3 {
+	content: url('images/suzuki.png');
+	object-fit: contain;
+	width: 500px;
+	height: 300px;
+	border-radius: 30px;
+	float: right;
+	margin-top: -300px;
+}
+#carLogo4 {
+	content: url('images/ford.png');
+	object-fit: contain;
+	width: 500px;
+	height: 300px;
+	border-radius: 30px;
+	float: right;
+	margin-top: -300px;
+}
+#carLogo5 {
+	content: url('images/hyundai.png');
+	object-fit: contain;
+	width: 500px;
+	height: 300px;
+	border-radius: 30px;
+	float: right;
+	margin-top: -300px;
+}
+#carLogo6 {
+	content: url('images/volkswagen.png');
+	object-fit: contain;
+	width: 500px;
+	height: 300px;
+	border-radius: 30px;
+	float: right;
+	margin-top: -300px;
+}
+
+#carLogo7 {
+	content: url('images/suzuki.png');
+	object-fit: contain;
+	width: 500px;
+	height: 300px;
+	border-radius: 30px;
+	float: right;
+	margin-top: -300px;
+}
+#carLogo8 {
+	content: url('images/honda.png');
+	object-fit: contain;
+	width: 500px;
+	height: 300px;
+	border-radius: 30px;
+	float: right;
+	margin-top: -310px;
+}
+
+delivery:after { 
+	color: rgb(255,214,170); 
+	text-shadow: 2px 2px rgba(0,80,260,10); 
+	display: block;  
+	content: attr(charge_type) " Delivery";  
+	animation: opacity 2s ease-in-out infinite;
+	font-weight: bold;     
+	font-family: Helvetica;   
+	font-size: 30pt;     
+	margin-bottom: 10px; 
+	animation-name: example;
+	animation-duration: 5s;
+}
+
+@keyframes example {	/* creation of animation property named example */
+   0%   {background-color: lightgrey;}
+  25%  {background-color: grey;}
+  50%  {background-color: brown;}
+  100% {background-color: silver;}
+}
+
+additional_information:before {  
+	content: "Additional Information:"; 
+	font-size: 24pt;
+	font-weight: bold;
+	color: orange; 
+	text-decoration: underline; 
+	margin-bottom: 20px; 
+} 
+
+manufacturer:before {
+	content: "Manufacturer: ";   
+	font-weight: bold;  
+	margin-left: 10px;
+	color: orange;
+	font-size: 22pt;
+}
+
+manufacturer, color, dimension {
+	font-size: 30px;
+}
+
+dimension:before {  
+	content: "Dimension: ";   
+	font-weight: bold;  
+	margin-left: 10px; 
+	color: orange;
+	font-size: 22pt;
+} 
+
+mileage:before {
+	content: "Mileage: ";
+	font-weight: bold;
+	color: orange;
+	font-size: 22pt;
+}
+
+fuel_tank:before {
+	content: "Fuel Tank Capacity: ";
+	font-weight: bold;
+	color: orange;
+	font-size: 22pt;
+}
+
+color:before {  
+	content: "Color: ";   
+	font-weight: bold;  
+	margin-left: 10px; 
+	color: orange;
+	font-size: 22pt;
+} 
+
+[type="Sedan"]:before {  
+	content: "Item Type: Sedan"; 
+	color: rgb(169,169,169);
+	text-decoration: underline; 
+	font-family: Arial;  
+	font-size: 30pt;  
+	font-weight: bold; 
+	float: right;
+} 
+
+[type="SUV"]:before {  
+	content: "Item Type: SUV"; 
+	color: rgb(169,169,169);
+	text-decoration: underline; 
+	font-family: Arial;  
+	font-size: 30pt;  
+	font-weight: bold; 
+	float: right;
+} 
+
+[type="Hatchback"]:before {  
+	content: "Item Type: Hatchback";  
+	color: rgb(169,169,169);
+	text-decoration: underline; 
+	font-family: Arial;  
+	font-size: 30pt;  
+	font-weight: bold; 
+	float: right;	
+} 
+
+[car_type="Diesel"], [car_type="Petrol"], [car_type="Electric"] {
+	border-bottom: 1.5px solid yellow;  
+	margin-top: 5px;   
+} 
+
+[car_type="Diesel"]:before {  
+	display: block; 
+	content: "Car Type: Diesel";
+	color: gold;
+	text-decoration: underline;  
+	font-family: Arial;  
+	font-size: 30pt;  
+	font-weight: bold;
+} 
+
+[car_type="Petrol"]:before { 
+	display: block; 
+	content: "Car Type: Petrol"; 
+	color: gold;
+	text-decoration: underline;   
+	font-family: Arial;  
+	font-size: 30pt;  
+	font-weight: bold; 
+} 
+
+[car_type="Electric"]:before { 
+	display: block; 
+	content: "Car Type: Electric";
+	color: gold;
+	text-decoration: underline;    
+	font-family: Arial;  
+	font-size: 30pt;  
+	font-weight: bold; 
+}
+
+copyright {
+	text-align: center;
+	font-size: 20px;
+}
+
+message {
+	font-size: 28pt;
+	font-weight: bold;
+}

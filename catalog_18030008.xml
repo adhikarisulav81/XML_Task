@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?> <!-- declaration of the XML content -->
+
+<!-- Online Vehicle Shop
+	Developed By:	Sulav Adhikari
+	Date: 			April 20, 2020
+	Supportive Files: 
+		Schema: catalog_18030008.xsd
+		CSS:	catalog_18030008.css -->
+
+<!-- importing CSS file -->
+<?xml-stylesheet type="text/css" href="catalog_18030008.css"?>
+<!-- importing schema file -->
+<vehicle_shop xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="catalog_18030008.xsd">
+	
+	<!-- detail information about the online vehicle shop -->
+	<message>Welcome!!</message>
+	<shop_detail>
+		<slogan>Tension Nagara Deal Gara @dealgara.com</slogan>
+		<launched_on>August 1, 2014</launched_on>
+		<logo href="logo.jpg" id='logo'/> 	<!-- inserting the logo of a online vehicle shop -->
+		<shop_name> DealGara.com </shop_name> <!-- declaration of a shop name -->
+		<address>
+			<city>Kathmandu, </city>
+			<country>Nepal</country>
+		</address>
+		<telephone_number>01-4410987</telephone_number>
+		<website_url>www.dealgara.com</website_url>
+		<shop_description>DealGara is Nepal's No. 1 Online Vehicle Shop. Customers and public can arrive here to research, buy or sell vehicles easily and quickly. They can also get information about new vehicle prices and specifications. In 2014, it was awarded by NADA Auto Show. Feel Free To Shop Your Vehicle @delgara.com</shop_description> 	<!-- short description about the shop -->
+	</shop_detail>
+
+	<!-- declaration of a root element tag of the item -->
+	<items>
+		<!-- detail information about the items of the vehicle shop with the element tag named item -->
+		<item item_number="T1" type="Sedan"> <!-- item element contains item_number and type attribute -->
+			<brand_name brand_code="TA01" car_type="Diesel">Brand Name: Tata</brand_name> <!-- brand_name element contains brand_code and car_type attribute -->
+			<description dID="d1"> <!-- introducing dID as an attribute of a description element tag -->
+				<li>Model: Tata Manza</li>
+				<li>Engine Displacement: 1248cc</li>
+				<li>Maximum Power: 90 bhp @4000rpm</li>
+			</description>
+			<quantity>4 pieces </quantity>
+			<price>Rs. 27,70,000/-</price>
+			<mileage>18.8 kmpl</mileage>
+			<fuel_tank>44 litres</fuel_tank>
+			<carImage id="car_image1"></carImage> 	<!-- this tag is used to insert the particular company's car image using css --> 
+			<carLogo id="carLogo1"></carLogo> 	<!-- used to insert the respective car company's logo using css -->
+			<delivery charge_type="Free"></delivery>
+			<!--  describing the additional information about the specifications of a vehicle may be optional -->
+			<additional_information info="AddInfo01"> <!-- additional_information tag contains info as a attribute. additional_information tag may be optional -->
+				<manufacturer>Tata</manufacturer>
+				<color>Black</color>
+				<dimension>4413 x 1703 x 1550 mm</dimension>
+			</additional_information>
+		</item>
+
+		<item item_number="A2" type="SUV">
+			<brand_name brand_code="AU02" car_type="Electric">Brand Name: Audi</brand_name>
+			<description dID="d2">
+			<li>Model: Audi E-Tron</li> <!-- li tag defines the list item containing the description of a model -->
+			<li>It is a fully electric luxury SUV introduced by Audi &amp; is powered by a 95kWh battery pack of which 83.6 kWh is usable.</li>
+			<li>80 % the charge can be done in only about 30 minutes when 150kW DC fast charger is used.</li>
+			<li>Engine: Electric</li>
+			</description>
+			<quantity>3 pieces</quantity>
+			<price>Rs. 1,75,00,000/-</price>
+			<carImage id="car_image2"></carImage>
+			<carLogo id="carLogo2"></carLogo>
+			<delivery charge_type="Express"></delivery>
+			<additional_information info="AddInfo02">
+				<manufacturer>Audi</manufacturer>
+				<color>Blue</color>
+			</additional_information>
+		</item>
+
+		<item item_number="M3" type="Hatchback">
+			<brand_name brand_code="MA03" car_type="Diesel">Brand Name: Maruti Suzuki</brand_name>
+			<description dID="d3">
+			<li>Model: Maruti Suzuki Alto 800 LXi</li>
+			<li>This model was designed in the year 2014.</li>
+			<li>Engine &amp; Power: Engine of 796 cc &amp; Power of 47.3 bhp.</li>
+			</description>
+			<quantity>7 pieces</quantity>
+			<price>Rs. 16,99,000/-</price>
+			<mileage>City &amp; Highway Mileage is about 17 &amp; 22.74 kmpl respectively.</mileage>
+			<fuel_tank>35 litres</fuel_tank>
+			<carImage id="car_image3"></carImage>
+			<carLogo id="carLogo3"></carLogo>
+			<delivery charge_type="Free"></delivery>
+		</item>
+			
+		<item item_number="F4" type="Hatchback">
+			<brand_name brand_code="FO04" car_type="Petrol">Brand Name: Ford</brand_name>
+			<description dID="d4">
+			<li>Model: Ford Figo</li>
+			<li>Engine Displacement: 1498 cc</li>
+			<li>Maximum Power: 99bhp @3750 rpm</li>
+			</description>
+			<quantity>Only 1 piece</quantity>
+			<price>Rs. 21,99,000/-</price>
+			<mileage>25.83 kmpl</mileage>
+			<fuel_tank>40 litres</fuel_tank>
+			<carImage id="car_image4"></carImage>
+			<carLogo id="carLogo4"></carLogo>
+			<delivery charge_type="Free"></delivery>
+		</item>
+
+		<item item_number="H5" type="Hatchback">
+			<brand_name brand_code="HY05" car_type="Petrol">Brand Name: Hyundai</brand_name>
+			<description dID="d5">
+			<li>Model: Hyundai Grand i10</li>
+			<li>Engine Displacement: 1197 cc</li>
+			<li>Maximum Power: 81 bhp @6000 rpm</li>
+			</description>
+			<quantity>5 pieces</quantity>
+			<price>Rs. 26,96,000/-</price>
+			<mileage>19.77 kmpl</mileage>
+			<fuel_tank>43 litres</fuel_tank>
+			<carImage id="car_image5"></carImage>
+			<carLogo id="carLogo5"></carLogo>
+			<delivery charge_type="Express"></delivery>
+
+			<additional_information info="AddInfo03">
+				<manufacturer>Hyundai</manufacturer>
+				<color>Red</color>
+				<dimension>3765 x 1660 x 1520 mm</dimension>
+			</additional_information>
+		</item>
+
+		<item item_number="V6" type="Sedan">
+			<brand_name brand_code="VO06" car_type="Diesel">Brand Name: Volkswagen</brand_name>
+			<description dID="d6">
+			<li>Model: Volkswagen POLO</li>
+			<li>Engine Displacement: 1198 cc</li>
+			<li>Maximum Power: 74 bhp @5400 rpm</li>
+			</description>
+			<quantity>4 pieces</quantity>
+			<price>Rs. 27,45,000/-</price>
+			<mileage>16 kmpl</mileage>
+			<fuel_tank>45 litres</fuel_tank>
+			<carImage id="car_image6"></carImage>
+			<carLogo id="carLogo6"></carLogo>
+			<delivery charge_type="Paid"></delivery>
+		</item>
+		
+		<item item_number="M7" type="Sedan">
+			<brand_name brand_code="MA07" car_type="Diesel">Brand Name: Maruti Suzuki</brand_name>
+			<description dID="d7">
+			<li>Model: Maruti Suzuki Dzire</li>
+			<li>Engine Displacement: 1197 cc</li>
+			<li>Maximum Power: 82 bhp @6000 rpm</li>
+			</description>
+			<quantity>2 pieces</quantity>
+			<price>Rs. 30,89,000/-</price>
+			<mileage>22 kmpl</mileage>
+			<fuel_tank>37 litres</fuel_tank>
+			<carImage id="car_image7"></carImage>
+			<carLogo id="carLogo7"></carLogo>
+			<delivery charge_type="Free"></delivery>
+		</item>
+
+		<item item_number="H8" type="Hatchback">
+			<brand_name brand_code="HO08" car_type="Petrol">Brand Name: Honda</brand_name>
+			<description dID="d8">
+			<li>Model: Honda CR V RVSI 2</li>
+			<li>Engine Displacement: 1997 cc</li>
+			<li>Maximum Power: 150 bhp</li>
+			</description>
+			<quantity>Only 1 piece</quantity>
+			<price>Rs. 1,33,00,000/-</price>
+			<mileage>13.7 kmpl</mileage>
+			<fuel_tank>58 litres</fuel_tank>
+			<carImage id="car_image8"></carImage>
+			<carLogo id="carLogo8"></carLogo>
+			<delivery charge_type="Free"></delivery>
+		</item>
+	</items>
+	<message> Thank You for Visiting!! </message>
+	<copyright>+977-9812340456 | Copyright &#169; 2020 Designed By Sulav Adhikari.</copyright>
+</vehicle_shop>

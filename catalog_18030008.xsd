@@ -1,0 +1,159 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="vehicle_shop">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded" minOccurs="0">
+        <xs:element type="xs:string" name="message">
+          <xs:annotation>   <!-- xs:annotation element is used to document a schema -->
+            <xs:documentation> detail information about the online vehicle shop </xs:documentation>   <!-- xs:documentation is a container for human-readable documentation in plain text or structured formats -->
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="shop_detail">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="slogan" maxOccurs="1" minOccurs="0"/>
+              <xs:element type="xs:string" name="launched_on"/>
+              <xs:element name="logo">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute type="xs:string" name="href"/>
+                      <xs:attribute type="xs:string" name="id"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:string" name="shop_name"/>
+              <xs:element name="address">
+                <xs:annotation>
+                  <xs:documentation> declaration of a shop name </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="city"/>
+                    <xs:element type="xs:string" name="country"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:string" name="telephone_number"/>
+              <xs:element type="xs:anyURI" name="website_url"/>
+              <xs:element type="xs:string" name="shop_description"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="items">
+          <xs:annotation>
+            <xs:documentation> declaration of items as a root element tag </xs:documentation>
+          </xs:annotation>
+          <xs:complexType mixed="true">
+            <xs:sequence>
+              <xs:element name="item" maxOccurs="unbounded" minOccurs="1">
+                <xs:annotation>
+                  <xs:documentation> information about the items of the online vehicle shop with the element tag named item</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="brand_name">
+                      <xs:annotation>
+                        <xs:documentation>item element contains item_number and type attribute</xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="brand_code" use="optional"/>
+                            <xs:attribute name="car_type" use="optional">
+                              <xs:simpleType>
+                                <xs:restriction base="xs:string"> <!-- restriction on XML restricts the unusual value -->
+                                  <xs:enumeration value="Petrol" /> <!-- enumeration in XML schema defines a list of values that are acceptable -->
+                                  <xs:enumeration value="Diesel" />
+                                  <xs:enumeration value="Electric" />
+                                </xs:restriction>
+                              </xs:simpleType>
+                            </xs:attribute>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="description">
+                      <xs:annotation>
+                        <xs:documentation> brand_name element tag contains brand_code and car_type attribute </xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="li" maxOccurs="unbounded" minOccurs="1">
+                            <xs:annotation>
+                              <xs:documentation>  description element tag contains dID as an attribute. Moreover, it contains li tag which defines the list item containing the description of a model </xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute type="xs:string" name="dID" use="optional"/>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:string" name="quantity"/>
+                    <xs:element type="xs:string" name="price"/>
+                    <xs:element type="xs:string" name="mileage" minOccurs="0"/>
+                    <xs:element type="xs:string" name="fuel_tank" minOccurs="0"/>
+                    <xs:element name="carImage">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="id" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="carLogo">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="id" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="delivery">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="charge_type" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="additional_information" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation> introducing the additional information about the specifications of a vehicle that may be optional </xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="manufacturer">
+                            <xs:annotation>
+                              <xs:documentation> additional_information tag contains info as a attribute </xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element type="xs:string" name="color"/>
+                          <xs:element type="xs:string" name="dimension" minOccurs="0" maxOccurs="1"/>
+                        </xs:sequence>
+                        <xs:attribute type="xs:string" name="info" use="optional"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="item_number" use="optional"/>
+                  <xs:attribute name="type" use="optional">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:enumeration value="Sedan" />
+                        <xs:enumeration value="SUV" />
+                        <xs:enumeration value="Hatchback" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:attribute>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="copyright" type="xs:string"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
